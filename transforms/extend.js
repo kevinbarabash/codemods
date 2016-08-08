@@ -1,4 +1,4 @@
-function transformer(file, api) {
+module.exports = (file, api) => {
     const j = api.jscodeshift;
 
     const root = j(file.source);
@@ -34,6 +34,4 @@ function transformer(file, api) {
             }
         })
         .toSource();
-}
-
-module.exports = transformer;
+};
