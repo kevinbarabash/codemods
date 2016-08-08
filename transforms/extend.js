@@ -16,7 +16,6 @@ module.exports = (file, api) => {
             return false;
         })
         .replaceWith(p => {
-            const {object, property} = p.value.callee;
             const {arguments: args} = p.value;
 
             if (args[0].type === 'ObjectExpression' && args[0].properties.length === 0) {
