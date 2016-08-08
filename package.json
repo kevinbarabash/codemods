@@ -1,0 +1,30 @@
+{
+  "name": "codemods",
+  "version": "0.0.1",
+  "description": "collection of codemods",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinbarabash/codemods.git"
+  },
+  "author": "Kevin Barabash <kevinb@khanacademy.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevinbarabash/codemods/issues"
+  },
+  "homepage": "https://github.com/kevinbarabash/codemods#readme",
+  "devDependencies": {
+    "babel-jest": "^14.1.0",
+    "babel-preset-es2015": "^6.13.2",
+    "babel-preset-stage-1": "^6.13.0",
+    "jest": "13.2.3",
+    "jscodeshift": "^0.3.27"
+  },
+  "jest": {
+    "automock": false,
+    "scriptPreprocessor": "./node_modules/babel-jest"
+  }
+}
