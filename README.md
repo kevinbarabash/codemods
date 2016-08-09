@@ -49,7 +49,9 @@ you before committing changes.
 ### util.js
 
 - `_.isArray(x) -> Array.isArray(x)`
-- `_.isFunction(x) -> typeof(x) === 'function'`
-- `_.isString(x) -> typeof(x) === 'string'`
+- `_.isBoolean(x) -> typeof(x) === 'boolean'`
 - `_.isFinite(x) -> Number.isFinite(x)`
+- `_.isFunction(x) -> typeof(x) === 'function'`
+- `_.isNull(x) -> x === null`
+- `_.isString(x) -> typeof(x) === 'string'`
 - `_.isUndefined(x) -> typeof(x) === 'undefined'`

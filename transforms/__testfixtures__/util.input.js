@@ -1,5 +1,7 @@
 _.isArray(array);
-_.isFunction(fn);
-_.isString(str);
+_.isBoolean(bool);
 _.isFinite(num);
+_.isFunction(fn);
+_.isNull(obj);
+_.isString(str);
 _.isUndefined(undef);

@@ -1,5 +1,5 @@
 const methods= [
-    'isArray', 'isFunction', 'isString', 'isFinite', 'isUndefined'
+    'isArray', 'isBoolean', 'isFinite', 'isFunction', 'isNull', 'isString', 'isUndefined'
 ];
 
 module.exports = (file, api) => {
@@ -32,17 +32,11 @@ module.exports = (file, api) => {
                         ),
                         args
                     );
-                case 'isFunction':
+                case 'isBoolean':
                     return j.binaryExpression(
                         '===',
                         j.unaryExpression('typeof', args[0]),
-                        j.literal('function')
-                    );
-                case 'isString':
-                    return j.binaryExpression(
-                        '===',
-                        j.unaryExpression('typeof', args[0]),
-                        j.literal('string')
+                        j.literal('boolean')
                     );
                 case 'isFinite':
                     return j.callExpression(
@@ -51,6 +45,24 @@ module.exports = (file, api) => {
                             j.identifier('isFinite')
                         ),
                         args
+                    );
+                case 'isFunction':
+                    return j.binaryExpression(
+                        '===',
+                        j.unaryExpression('typeof', args[0]),
+                        j.literal('function')
+                    );
+                case 'isNull':
+                    return j.binaryExpression(
+                        '===',
+                        args[0],
+                        j.literal(null)
+                    );
+                case 'isString':
+                    return j.binaryExpression(
+                        '===',
+                        j.unaryExpression('typeof', args[0]),
+                        j.literal('string')
                     );
                 case 'isUndefined':
                     return j.binaryExpression(
