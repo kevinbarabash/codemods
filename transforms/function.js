@@ -42,6 +42,3 @@ module.exports = (file, api) => {
         })
         .toSource();
 };
-
-
-var partiallyAppliedFn = (...args) => fn(5, 10, ...args);
