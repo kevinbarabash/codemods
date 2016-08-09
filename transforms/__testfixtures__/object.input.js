@@ -11,3 +11,6 @@ _.keys(obj);
 
 _.values({x:5, y:10});
 _.values(obj);
+
+_.pairs({x:5, y:10});
+_.pairs(obj);

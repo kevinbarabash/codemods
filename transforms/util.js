@@ -1,4 +1,4 @@
-const checks = [
+const methods= [
     'isArray', 'isFunction', 'isString', 'isFinite', 'isUndefined'
 ];
 
@@ -13,7 +13,7 @@ module.exports = (file, api) => {
             const callee = p.value.callee;
             if (callee.type === 'MemberExpression') {
                 const {object, property} = callee;
-                if (object.name === '_' && checks.indexOf(property.name) !== -1) {
+                if (object.name === '_' && methods.indexOf(property.name) !== -1) {
                     return true;
                 }
             }

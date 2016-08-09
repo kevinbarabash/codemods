@@ -20,3 +20,6 @@ Object.keys(obj);
 
 Object.values({x:5, y:10});
 Object.values(obj);
+
+Object.entries({x:5, y:10});
+Object.entries(obj);

@@ -1,4 +1,4 @@
-const methods = ['clone', 'extend', 'keys', 'values'];
+const methods = ['clone', 'extend', 'keys', 'pairs', 'values'];
 
 module.exports = (file, api) => {
     const j = api.jscodeshift;
@@ -43,6 +43,14 @@ module.exports = (file, api) => {
                         j.memberExpression(
                             j.identifier('Object'),
                             j.identifier('keys')
+                        ),
+                        args
+                    );
+                case 'pairs':
+                    return j.callExpression(
+                        j.memberExpression(
+                            j.identifier('Object'),
+                            j.identifier('entries')
                         ),
                         args
                     );
